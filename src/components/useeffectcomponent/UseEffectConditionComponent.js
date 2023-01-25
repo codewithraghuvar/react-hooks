@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 const UseEffectConditionalCounter = () => {
-
     const [count, setCount] = useState(0)
     const [name, setName] = useState('')
 
