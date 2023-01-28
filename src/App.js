@@ -16,8 +16,11 @@ import ContextComponentB from './components/useContext/ContextComponentB';
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
 */
+/*
 import UseRecuderSimpleComponent from './components/useReducer/UseReducerSimpleComponent';
 import UseReducerComplexComponent from './components/useReducer/UseReducerComplexComponent';
+*/
+import UseRecuderMultipleComponent from './components/useReducer/useRecuderMultipleComponent';
 
 function App() {
   return (
@@ -40,10 +43,11 @@ function App() {
       */
      /*
      <UseRecuderSimpleComponent/> 
+     <UseReducerComplexComponent/>
       */
      }
-      
-     <UseReducerComplexComponent/>
+     <UseRecuderMultipleComponent/>
+     
      
     </div>
   );
