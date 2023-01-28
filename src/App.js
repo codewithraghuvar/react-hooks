@@ -10,12 +10,14 @@ import UseEffectConditionalCounter from './components/useeffectcomponent/UseEffe
 import UseEffectAPIComponent from './components/useeffectcomponent/UseEffectAPIComponent';
 import UseEffectAPICallInputButton from './components/useeffectcomponent/UseEffectAPICallInputButton';
 */
+/*
 import ContextComponentA from './components/useContext/ContextComponentA';
 import ContextComponentB from './components/useContext/ContextComponentB';
-
-
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
+*/
+import UseRecuderSimpleComponent from './components/useReducer/UseReducerSimpleComponent';
+import UseReducerComplexComponent from './components/useReducer/UseReducerComplexComponent';
 
 function App() {
   return (
@@ -30,14 +32,19 @@ function App() {
       /*<UseEffectAPIComponent/>*/
       /*<UseEffectAPICallInputButton/>*/
       /*
-      
-      */
-     }    
-     <UserContext.Provider value= {'Raghuvar'}>
+      <UserContext.Provider value= {'Raghuvar'}>
         <ChannelContext.Provider value= {'code with raghuvar'}>
           <ContextComponentA/>
         </ChannelContext.Provider>
-      </UserContext.Provider>
+      </UserContext.Provider>     
+      */
+     /*
+     <UseRecuderSimpleComponent/> 
+      */
+     }
+      
+     <UseReducerComplexComponent/>
+     
     </div>
   );
 }

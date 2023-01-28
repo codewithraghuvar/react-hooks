@@ -1,0 +1,1 @@
+use reducer is a hook that is used for state management in React
