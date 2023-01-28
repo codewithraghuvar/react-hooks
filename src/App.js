@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React , { useReducer }from 'react';
 /*
 import UseStateComponent from './components/usestatecomponent/UseStateComponents';
 import UseStatePreComponent from './components/usestatecomponent/UseStatePreComponents';
@@ -19,11 +19,31 @@ export const ChannelContext = React.createContext()
 /*
 import UseRecuderSimpleComponent from './components/useReducer/UseReducerSimpleComponent';
 import UseReducerComplexComponent from './components/useReducer/UseReducerComplexComponent';
-*/
 import UseRecuderMultipleComponent from './components/useReducer/useRecuderMultipleComponent';
+*/
+import UseReducerComponentA from './components/useReducer/UseReducerComponentA';
+import UseReducerComponentB from './components/useReducer/UseReducerComponentB';
 
+export const CountContext = React.createContext()
+
+const initialState = 0
+const reducer = (state, action) =>{
+    switch (action) {
+        case 'increment':
+            return state + 1
+        case 'decrement':
+            return state - 1
+        case 'reset':
+            return initialState
+        default:
+            return state
+    }
+}
 function App() {
+  const [count, dispatch] = useReducer(reducer, initialState)
+
   return (
+    <CountContext.Provider value={{ countState: count, countDispatch: dispatch }}>
     <div className="App">
      {
       /*<UseStateComponent/>*/
@@ -44,12 +64,18 @@ function App() {
      /*
      <UseRecuderSimpleComponent/> 
      <UseReducerComplexComponent/>
+     <UseRecuderMultipleComponent/>
       */
      }
-     <UseRecuderMultipleComponent/>
+     
+    
+      count : {count}
+      <UseReducerComponentA/>
+      <UseReducerComponentB/>
      
      
     </div>
+    </CountContext.Provider>
   );
 }
 
