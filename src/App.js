@@ -21,6 +21,8 @@ import UseRecuderSimpleComponent from './components/useReducer/UseReducerSimpleC
 import UseReducerComplexComponent from './components/useReducer/UseReducerComplexComponent';
 import UseRecuderMultipleComponent from './components/useReducer/useRecuderMultipleComponent';
 */
+import UseReducerEffect from './components/useReducerWithEffect/UseReducerEffect';
+/*
 import UseReducerComponentA from './components/useReducer/UseReducerComponentA';
 import UseReducerComponentB from './components/useReducer/UseReducerComponentB';
 
@@ -39,11 +41,12 @@ const reducer = (state, action) =>{
             return state
     }
 }
+*/
 function App() {
-  const [count, dispatch] = useReducer(reducer, initialState)
+  // const [count, dispatch] = useReducer(reducer, initialState)
 
   return (
-    <CountContext.Provider value={{ countState: count, countDispatch: dispatch }}>
+    
     <div className="App">
      {
       /*<UseStateComponent/>*/
@@ -67,15 +70,17 @@ function App() {
      <UseRecuderMultipleComponent/>
       */
      }
-     
-    
+     {
+      /*
       count : {count}
       <UseReducerComponentA/>
       <UseReducerComponentB/>
-     
+      */
+     } 
+     <UseReducerEffect/>
      
     </div>
-    </CountContext.Provider>
+    
   );
 }
 
